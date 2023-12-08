@@ -80,6 +80,25 @@ namespace Topic_7___keyboard_input
                 pacTexture = Content.Load<Texture2D>("PacSleep");
             }
 
+            if (pacLocation.Right >= 801)
+            {
+                pacLocation.X = 725;
+            }
+
+            if (pacLocation.Left <= 0)
+            {
+                pacLocation.X = 0;
+            }
+
+            if (pacLocation.Top <= 0)
+            {
+                pacLocation.Y = 0;
+            }
+            if (pacLocation.Bottom >= 501)
+            {
+                pacLocation.Y = 425;
+            }
+
             oldState = keyboardState;
 
             base.Update(gameTime);
